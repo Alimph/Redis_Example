@@ -1,4 +1,4 @@
-﻿namespace Aggregate
+﻿namespace _Shared
 {
     public class Customer
     {
