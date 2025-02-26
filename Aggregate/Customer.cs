@@ -1,0 +1,16 @@
+﻿namespace Aggregate
+{
+    public class Customer
+    {
+        public Customer(string name, string age)
+        {
+            Name = name;
+            Age = age;
+            CreationDate = DateTime.Now;
+        }
+
+        public string Name { get; set; }
+        public string Age { get; set; }
+        public DateTime CreationDate { get; set; }
+    }
+}
