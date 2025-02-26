@@ -1,0 +1,24 @@
+﻿@page
+@model Customer.Pages.CreateCustomerModel
+@{
+    ViewData["Title"] = "Customer form";
+}
+<h3>Create Customer</h3>
+
+<form method="post">
+    <div class="row">
+        <div class="col">
+            <label asp-for="Customer.Name">
+                Customer Name:
+            </label>
+            <input class="form-control" asp-for="Customer.Name" />
+        </div>
+        <div class="col">
+            <label asp-for="Customer.Age">
+                Customer Age:
+            </label>
+            <input class="form-control" asp-for="Customer.Age" />
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+</form>
