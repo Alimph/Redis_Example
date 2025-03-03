@@ -14,7 +14,10 @@ namespace Customer
 
             builder.Services.AddDbContext<AppDbContext>(op => op.UseSqlite("DataSource=System.db"));
 
+
             var app = builder.Build();
+            using var scope = app.Services.CreateScope();
+            scope.ServiceProvider.GetRequiredService<AppDbContext>().Database.Migrate();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
