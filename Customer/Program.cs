@@ -1,13 +1,18 @@
+using Aggregate;
+using Microsoft.EntityFrameworkCore;
+
 namespace Customer
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
 
+            var builder = WebApplication.CreateBuilder(args);
             // Add services to the container.
             builder.Services.AddRazorPages();
+
+            builder.Services.AddDbContext<AppDbContext>(op => op.UseSqlite("DataSource=System.db"));
 
             var app = builder.Build();
 
