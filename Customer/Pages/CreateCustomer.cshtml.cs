@@ -1,3 +1,4 @@
+using Aggregate;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -19,7 +20,7 @@ namespace Customer.Pages
             {
                 return Page();
             }
-
+          
             // Add logic to save the customer
             return RedirectToPage("/Index");
         }
