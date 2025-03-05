@@ -2,10 +2,6 @@
 {
     public class Customer
     {
-        public Customer()
-        {
-                
-        }
         public Customer(string name, string age)
         {
             Name = name;
