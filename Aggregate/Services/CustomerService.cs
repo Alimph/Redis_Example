@@ -11,6 +11,7 @@
 
         public void CreateCustomer(_Shared.Customer customer)
         {
+            customer.CreationDate = DateTime.Now;
             _context.Add(customer);
             _context.SaveChanges();
         }
