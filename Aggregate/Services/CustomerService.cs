@@ -15,5 +15,10 @@
             _context.Add(customer);
             _context.SaveChanges();
         }
+
+        public IEnumerable<_Shared.Customer> GetAllCustomers()
+        {
+            return _context.Customers.ToList();
+        }
     }
 }
