@@ -2,11 +2,9 @@
 {
     public class Customer
     {
-        public Customer(string name, string age)
+        public Customer()
         {
-            Name = name;
-            Age = age;
-            CreationDate = DateTime.Now;
+                
         }
         public Guid Id { get; set; }
         public string Name { get; set; }
